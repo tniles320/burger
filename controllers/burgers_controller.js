@@ -41,7 +41,7 @@ router.get("/", (req, res) => {
     });
   });
   
-  router.delete("/api/burgers", (req, res) => {
+  router.delete("/api/burgers/:id", (req, res) => {
     const condition = `id = ${req.params.id}`
     
     burger.delete(condition, (result) => {
