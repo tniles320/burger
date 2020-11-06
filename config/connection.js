@@ -1,4 +1,4 @@
-const mysql = require("mysql");
+const mysql = require("mysql2");
 
 // const connection = mysql.createConnection({
 //   host: "localhost",
@@ -16,7 +16,7 @@ const connection = mysql.createPool({
 });
  
 // create mysql connection
-connection.getConnection((err) => {
+connection.connect((err) => {
   if (err) {
     console.error("error connecting: " + err.stack);
     return;
