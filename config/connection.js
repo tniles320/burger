@@ -8,7 +8,7 @@ const mysql = require("mysql");
 //   database: "burgers_db"
 // });
 
-const connection = mysql.createConnection({
+const connection = mysql.connectionPool({
   host: "us-cdbr-east-02.cleardb.com",
   user: "b8fb68a851496f",
   password: "21bf5db5",
