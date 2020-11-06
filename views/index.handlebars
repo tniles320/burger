@@ -36,6 +36,7 @@
 
 <script type="text/javascript">
 
+// changes burger devoured to true
 $(".devour").on("click", function(event) {
     const id = $(this).data("burgerid");
     $.ajax("/api/burgers/" + id, {
@@ -49,6 +50,7 @@ $(".devour").on("click", function(event) {
     );
 });
 
+// adds input burger
 $("#createBurger").on("submit", function(event) {
     event.preventDefault();
 
@@ -67,6 +69,7 @@ $("#createBurger").on("submit", function(event) {
     );
 });
 
+// deletes burger
 $(".delete").on("click", function(event) {
     const id = $(this).data("burgerid");
     $.ajax("/api/burgers/" + id, {

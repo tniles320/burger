@@ -1,12 +1,12 @@
 const orm = require("../config/orm");
 
+// variable to export 'select all' 'insert into' 'update' and 'delete' queries
 const burger = {
     selectAll: function(cb) {
       orm.selectAll("burgers", function(res) {
         cb(res);
       });
     },
-    // The variables cols and vals are arrays.
     insertOne: function(cols, vals, cb) {
       orm.insertOne("burgers", cols, vals, function(res) {
         cb(res);
