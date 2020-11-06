@@ -14,7 +14,7 @@ const connection = mysql.createPool({
   password: "21bf5db5",
   database: "heroku_92885bc0c03ac97"
 });
-
+ 
 // create mysql connection
 connection.getConnection((err) => {
   if (err) {
