@@ -11,10 +11,10 @@ const connection = mysql.createConnection({
 */
 
 const connection = mysql.createPool({
-  host: "us-cdbr-iron-east-02.cleardb.net",
-  user: "b7e2437887xxxa",
-  password: "0200xxx6",
-  database: "heroku_7643ec736354xxx"
+  host: "us-cdbr-east-02.cleardb.com",
+  user: "b8fb68a851496f",
+  password: "21bf5db5",
+  database: "heroku_92885bc0c03ac97"
 });
 
 // create mysql connection
