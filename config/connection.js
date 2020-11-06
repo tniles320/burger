@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
 });
 */
 
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
   host: "us-cdbr-iron-east-02.cleardb.net",
   user: "b7e2437887xxxa",
   password: "0200xxx6",
