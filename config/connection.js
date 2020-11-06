@@ -1,19 +1,18 @@
-const mysql = require("mysql2");
+const mysql = require("mysql");
 
-// const connection = mysql.createConnection({
-//   host: "localhost",
-//   port: 3306,
-//   user: "root",
-//   password: "password",
-//   database: "burgers_db"
-// });
+let connection;
 
-const connection = mysql.createPool({
-  host: "us-cdbr-east-02.cleardb.com",
-  user: "b8fb68a851496f",
-  password: "21bf5db5",
-  database: "heroku_92885bc0c03ac97"
-});
+if (process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+}else{
+  connection = mysql.createConnection({
+    port: 3306,
+    host: "localhost",
+    user: "root",
+    password: "password",
+    database: "burgers_db"
+  })
+}
  
 // create mysql connection
 connection.connect((err) => {
