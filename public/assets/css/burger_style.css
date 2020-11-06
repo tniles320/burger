@@ -1,0 +1,77 @@
+html {
+    background-color: rgb(255, 160, 122);
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+    'header header header header'
+    'menu menu menu menu'
+    'left left right right';
+    grid-gap: 10px;
+    padding: 10px;
+    place-items: center;
+
+}
+
+.burger {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#burger-image {
+    height: 116px;
+    width: 116px;
+    border-radius: 50%;
+}
+
+.add-burger {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#createBurger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    border-radius: 5px;
+    margin-top: 5px;
+    border: none;
+    height: 20px;
+    box-shadow: rgb(236, 250, 244) 1px 1px 5px 5px;
+    background-color: rgb(248, 144, 103);
+}
+
+.left-container {
+    grid-area: left;
+    place-items: center;
+}
+
+.right-conatiner {
+    grid-area: right;
+    place-items: center;
+}
+
+.devour {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.delete {
+    display: flex;
+    justify-content: flex-end;
+}

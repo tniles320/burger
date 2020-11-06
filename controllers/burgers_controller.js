@@ -4,17 +4,16 @@ const burger = require("../models/burger");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    burger.all((data) => {
+    burger.selectAll((data) => {
       const burgerObject = {
         burgers: data
       };
-      console.log(burgerObject);
       res.render("index", burgerObject);
     });
   });
   
   router.post("/api/burgers", (req, res) => {
-    burger.create([
+    burger.insertOne([
       "burger_name"
     ], [
       req.body.burger_name,
@@ -29,7 +28,7 @@ router.get("/", (req, res) => {
   
     console.log("condition", condition);
   
-    burger.update({
+    burger.updateOne({
       devoured: true
     }, condition, function(result) {
       if (result.changedRows == 0) {

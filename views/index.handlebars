@@ -1,23 +1,38 @@
-<h1>Eat Da Burger!</h1>
+<main>
+  <div class="burger">
+    <h1>Eat Da Burger!</h1>
+    <img src="/assets/img/burger.jpg" alt="burger image" id="burger-image">
+  </div>
 
-<h2>Add a Burger</h2>
-<form id="createBurger" class="button-size">
-  <textarea type="text" name="burger"></textarea>
-  <button type="submit">Save Burger!</button>
-</form>
+  <div class="add-burger">
+    <h2>Add a Burger</h2>
+    <form id="createBurger" class="button-size">
+      <textarea type="text" name="burger" id="input"></textarea>
+      <button type="submit">Save Burger!</button>
+    </form>
+  </div>
 
-<ul>
-  {{#each burgers}}
-    <p>
-      {{this.burger_name}}
-      {{#if devoured}}
-      <button data-burgerid="{{this.id}}" class="delete">Delete</button>
-      {{else}}
-      <button data-burgerid="{{this.id}}" class="devour">Devour!</button>
-      {{/if}}
-    </p>
-  {{/each}}
-</ul>
+  <div class="left-container">
+    {{#each burgers}}
+      <p>
+        {{#unless devoured}}
+        {{this.burger_name}}
+        <button data-burgerid="{{this.id}}" class="devour">Devour!</button>
+        {{/unless}}
+      </p>
+    {{/each}}
+  </div>
+  <div class="right-container">
+    {{#each burgers}}
+      <p>
+        {{#if devoured}}
+        {{this.burger_name}}
+        <button data-burgerid="{{this.id}}" class="delete">Delete</button>
+        {{/if}}
+      </p>
+    {{/each}}
+  </div>
+</main>
 
 <script type="text/javascript">
 
