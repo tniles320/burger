@@ -6,6 +6,9 @@
 
 Eat Da Burger! This app allows a user store, devour, and delete burgers from a user created list.
 
+### _Visit this website by clicking the link below_
+[Eat Da Burger!](https://burger-tniles.herokuapp.com/)
+
 ![terminal screenshot](public/assets/img/burger-screenshot.jpg)
 
 ## Table of Contents 
